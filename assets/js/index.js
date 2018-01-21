@@ -109,4 +109,4 @@ rogers.addEventListener("click", function() {
 	rogers.classList.toggle("potato");
 });
 
-if (media.matches) setTimeout(function() { confetti(birthday); }, 1000);
+if (media.matches) setTimeout(function() { confetti(birthday); }, 2000);
