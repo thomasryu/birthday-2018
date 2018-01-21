@@ -146,7 +146,7 @@ body, html {
 			.content-rogers-videos iframe {
 				height: 190px;
 				width: 300px;
-				border-radius: 5px;
+				border-radius: 2px;
 			}
 
 @media (min-width: 667px) {
