@@ -1,0 +1,275 @@
+body, html {
+	height: 100%;
+}
+
+.background {
+	position: fixed;
+    
+	left: 0;
+    top: 0;
+
+    height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
+}
+	.background-image {
+		position: relative;
+		z-index: -10;
+		height: 100%;
+		background: url("../images/background.jpg") no-repeat center;
+		background-size: cover;
+	}
+
+
+	.background-header-rogers {
+		height: 255px;
+		width: 185px;
+
+		position: absolute;
+	    top: 65px;
+	    left: calc(50% - 92px);
+
+		background: url("../images/rogers.png") no-repeat center;
+		background-size: cover;
+	
+		animation: bobbing 4s linear infinite;
+	}
+
+	.background-header-flare {
+		z-index: -5;
+
+		width: 550px;
+		height: 550px;
+
+		position: absolute;
+		top: -82px;
+		left: calc(50% - 260px);
+
+		background: url("../images/flare.png") no-repeat center;
+		background-size: cover;
+
+		animation: rotate 10s linear infinite;
+	}
+
+	.background-header-happy {
+		width: 186px;
+		height: 150px;
+
+		position: absolute;
+		top: 345px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		background: url("../images/birthday.png") no-repeat left;
+		background-size: cover;
+	}
+
+	.background-header-birthday {
+		width: 304px;
+		height: 150px;
+	
+		position: absolute;
+		top: 438px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		background: url("../images/birthday.png") no-repeat right;
+		background-size: cover;
+	}
+
+	@keyframes bobbing {
+	    0%   { transform: scale(1); }
+	    50%  { transform: scale(.95); }
+	    100% { transform: scale(1); }
+	}
+
+	@keyframes rotate {
+		0%   { transform: rotate(0d); }
+		100% { transform: rotate(360deg); }
+	}
+
+.content {
+	position: relative;
+	z-index: 10;
+
+	width: 90%;
+	max-width: 1150px;
+
+	margin: calc(100vh - 25px) auto 30px;
+	box-shadow: -8px 8px 2px 0px rgba(0,0,0,.5);
+	border-radius: 2px;
+	border-top: 25px solid #FFFBF4;
+
+	font-family: 'Courgette', cursive;
+}
+
+.content-rogers {
+	padding: 15px 0 10px;
+	background-color: #341D1C;
+}
+
+	.content-rogers-logo {
+		position: relative;
+
+		height: 100px;
+		width: 277px;
+
+		margin: 10px auto 37px;
+
+		background: url("../images/logo.png") no-repeat left;
+		background-size: cover;
+	}
+
+	.content-rogers-logo:after {
+		content: "";
+
+		height: calc(100% + 10px);
+		width: 100%;
+		
+		position: absolute;
+		top: 4px;
+		left: 0;
+
+		border-radius: 2px;
+		border-bottom: 2px solid #FFFBF4;
+	}
+
+	.content-rogers-videos {
+		display: flex;
+		justify-content: center;
+		flex-flow: row wrap;
+	}
+
+		.content-rogers-videos li {
+			margin-bottom: 18px;
+		}
+
+			.content-rogers-videos iframe {
+				height: 190px;
+				width: 300px;
+				border-radius: 5px;
+			}
+
+@media (min-width: 667px) {
+	.content-rogers-videos {
+		padding: 0 50px;
+	}
+}
+
+@media (min-width: 730px) {
+	.content-rogers-videos {
+		padding: 0 18px;
+	}
+		.content-rogers-videos li:nth-child(2n) {
+			margin-left: 20px;
+		}
+}
+
+@media (min-width: 1060px) {
+	.content-rogers-videos {
+		padding: 0 50px;
+	}
+}
+
+@media (min-width: 1084px) {
+	.content-rogers-videos {
+		padding: 0 18px;
+	}
+
+		.content-rogers-videos li:nth-child(2n) {
+			margin-left: 0;
+		}
+
+		.content-rogers-videos li:not(:nth-child(3n + 1)) {
+			margin-left: 20px;
+		}
+}
+
+@media (min-width: 1280px) {
+	.background-header-rogers {
+		height: 348px;
+		width: 250px;
+	    top: 55px;
+	    left: calc(50% - 125px);
+	}
+
+	.background-header-flare {
+		z-index: -5;
+
+		width: 900px;
+		height: 900px;
+
+		top: -220px;
+		left: calc(50% - 450px);
+	}
+
+	.background-header-happy {
+		display: none;
+	}
+
+	.background-header-birthday {
+		width: 950px;
+		height: 285px;
+		top: 405px;
+	}
+
+	.content {
+		margin-top: calc(100vh - 15px);
+	}
+
+		.content-rogers {
+			padding-bottom: 50px;
+		}
+
+		.content-rogers-logo {
+			height: 144px;
+			width: 400px;
+			margin: 15px auto 52px;
+		}
+
+		.content-rogers-logo:after {
+			top: 12px;
+			border-bottom: 3px solid #FFFBF4;
+		}
+
+		.content-rogers-videos {
+			padding: 0 15px;
+		}
+
+			.content-rogers-videos li {
+				margin-bottom: 30px;
+			}
+
+			.content-rogers-videos li:not(:nth-child(3n + 1)) {
+				margin-left: 32px;
+			}
+}
+
+@media (min-width: 1350px) {
+	.background-header-rogers {
+	    top: 70px;
+	}
+
+	.background-header-flare {
+		top: -205px;
+	}
+
+	.background-header-birthday {
+		top: 435px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.background-header-rogers {
+	    top: 120px;
+	}
+
+	.background-header-flare {
+		top: -155px;
+	}
+
+	.background-header-birthday {
+		top: 495px;
+	}
+}
